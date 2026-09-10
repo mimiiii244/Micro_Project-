@@ -28,52 +28,6 @@ w22 <- read_dta(file.path(path, "Combined_v220c.dta"))   # 2022 #Post-Treatment
 # Keep variables of interest and give every wave the same variable names
 # -------------------------------------------------------------------------------------------------------------------------
 
-p15 <- w15[c(
-  "xwaveid",
-  "ohhpxid",
-  "olsrelsp",
-  "ohgage",
-  "ohgsex",
-  "ohhstate",
-  "ojbmh"
-)]
-
-names(p15) <- c(
-  "xwaveid",
-  "partner",
-  "sat",
-  "age",
-  "sex",
-  "state",
-  "wfh"
-)
-
-p15$year <- 2015
-
-
-p16 <- w16[c(
-  "xwaveid",
-  "phhpxid",
-  "plsrelsp",
-  "phgage",
-  "phgsex",
-  "phhstate",
-  "pjbmh"
-)]
-
-names(p16) <- c(
-  "xwaveid",
-  "partner",
-  "sat",
-  "age",
-  "sex",
-  "state",
-  "wfh"
-)
-
-p16$year <- 2016
-
-
 p17 <- w17[c(
   "xwaveid",
   "qhhpxid",
@@ -217,8 +171,6 @@ p22$year <- 2022
 # -------------------------------------------------------------------------------------------------------------------------
 
 long <- rbind(
-  p15,
-  p16,
   p17,
   p18,
   p19,
