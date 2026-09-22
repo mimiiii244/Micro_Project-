@@ -1,4 +1,4 @@
-# -------------------------------------------------------------------------------------------------------------------------
+ # -------------------------------------------------------------------------------------------------------------------------
 # Staggered DiD: 2017-2022
 # -------------------------------------------------------------------------------------------------------------------------
 
@@ -336,18 +336,39 @@ long <- merge(
 # Keep observations that:
 # i) can be assigned to a valid treatment cohort
 # ii) have partner satisfaction recorded in that person-year
+# iii) have the same partner in 2019 and 2020
 #
 # We do NOT require people to:
 # - be partnered specifically in 2019
-# - have the same partner after treatment
 # - have satisfaction observed in every year
 # - have a balanced 2017-2022 panel
 
+# Keep valid treatment cohorts with observed satisfaction
 did_sample <- long[
   !is.na(long$g) &
     !is.na(long$sat),
 ]
 
+# Keep only people who have the same partner across all observations
+same_partner_ids <- tapply(
+  seq_len(nrow(did_sample)),
+  did_sample$xwaveid,
+  function(idx) {
+    d <- did_sample[idx, ]
+    d <- d[d$year %in% 2019:2022, ]
+    
+    length(unique(d$year)) == 4 &&
+      all(!is.na(d$partner)) &&
+      length(unique(d$partner)) == 1
+  }
+)
+
+did_sample <- did_sample[
+  did_sample$xwaveid %in% names(same_partner_ids)[same_partner_ids],
+]
+
+nrow(did_sample)
+length(unique(did_sample$xwaveid)) #2812 unique individuals left
 
 # -------------------------------------------------------------------------------------------------------------------------
 # Check final treatment groups
