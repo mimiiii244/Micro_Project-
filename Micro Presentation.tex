@@ -1,0 +1,305 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% ==================================================
+% 1. SETUP AND PACKAGES
+% ==================================================
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% ==================================================
+% 2. COLOUR PALETTE
+% ==================================================
+
+\definecolor{forest}{RGB}{31,77,58}       % Dark forest green
+\definecolor{sage}{RGB}{107,142,105}      % Sage green
+\definecolor{terra}{RGB}{196,112,79}      % Muted terracotta
+\definecolor{olive}{RGB}{157,166,121}     % Soft olive
+\definecolor{plum}{RGB}{121,92,110}       % Muted plum
+\definecolor{cream}{RGB}{248,246,239}     % Warm cream
+
+% ==================================================
+% 3. BEAMER DESIGN AND FORMATTING
+% ==================================================
+
+% ==================================================
+% BEAMER DESIGN AND FORMATTING
+% ==================================================
+
+% Main colours
+\setbeamercolor{structure}{fg=forest}
+\setbeamercolor{title}{fg=cream}
+
+% Forest green header with cream text
+\setbeamercolor{frametitle}{fg=cream,bg=forest}
+
+% Header and footer palette
+\setbeamercolor{palette primary}{bg=forest,fg=cream}
+\setbeamercolor{palette secondary}{bg=sage,fg=cream}
+\setbeamercolor{palette tertiary}{bg=forest,fg=cream}
+\setbeamercolor{palette quaternary}{bg=olive,fg=cream}
+
+% Blocks and text
+\setbeamercolor{block title}{bg=forest,fg=cream}
+\setbeamercolor{block body}{bg=cream,fg=black}
+\setbeamercolor{alerted text}{fg=terra}
+\setbeamercolor{example text}{fg=sage}
+\setbeamercolor{background canvas}{bg=white}
+
+% Remove navigation icons
+\setbeamertemplate{navigation symbols}{}
+
+% Display slide numbers
+\setbeamertemplate{footline}[frame number]
+
+% Customise the slide title bar
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \begin{beamercolorbox}[
+        wd=\paperwidth,
+        ht=0.85cm,
+        dp=0.3cm,
+        leftskip=0.4cm,
+        rightskip=0.3cm
+    ]{frametitle}
+        \usebeamerfont{frametitle}
+        \insertframetitle
+    \end{beamercolorbox}
+}
+
+% ==================================================
+% 4. TITLE INFORMATION
+% ==================================================
+
+\title{Does increased work from home hours negatively impact relationship satisfaction?}
+
+\author{Amy Hu, Manya Mediratta, Nabila Huwaida}
+
+\date{October 2026}
+
+% ==================================================
+% 5. PRESENTATION
+% ==================================================
+
+\begin{document}
+
+% --------------------------------------------------
+% SLIDE 1: TITLE
+% --------------------------------------------------
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 2: RESEARCH QUESTION AND MOTIVATION
+% --------------------------------------------------
+
+\begin{frame}{Research Question and Motivation}
+
+    \begin{itemize}
+        \item \textbf{Research question:}
+        Does increased work from home hours negatively
+        impact relationship satisfaction?
+
+        \vspace{0.4cm}
+
+        \item \textbf{Motivation:}
+        % Why is this question important?
+
+        \item \textbf{Research significance:}
+        % Why should we care about this relationship?
+
+    \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 3: CONTRIBUTION TO THE LITERATURE
+% --------------------------------------------------
+
+\begin{frame}{Contribution to the Literature}
+
+    \begin{itemize}
+        \item \textbf{Existing literature:}
+        % What have previous studies found?
+
+        \item \textbf{Research gap:}
+        % What remains unexplored?
+
+        \item \textbf{Our contribution:}
+        % How does this study add value?
+
+    \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 4: DATA AND DESCRIPTIVE STATISTICS
+% --------------------------------------------------
+
+\begin{frame}{Data and Descriptive Statistics}
+
+    \begin{itemize}
+        \item \textbf{Data source and sample:}
+        % Dataset, sample size, population, time period
+
+        \item \textbf{Key variables:}
+        % Work from home hours and relationship satisfaction
+
+        \item \textbf{Descriptive statistics:}
+        % Means, standard deviations, distributions
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    % Insert descriptive statistics table or figure here.
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 5: METHODOLOGY
+% --------------------------------------------------
+
+\begin{frame}{Methodology}
+
+    \begin{itemize}
+        \item \textbf{Empirical strategy:}
+        % Explain the econometric approach
+
+        \item \textbf{Baseline specification:}
+    \end{itemize}
+
+    \begin{equation*}
+        \text{Relationship Satisfaction}_i
+        =
+        \beta_0
+        + \beta_1 \text{WFH Hours}_i
+        + \boldsymbol{\gamma}'\mathbf{X}_i
+        + \varepsilon_i
+    \end{equation*}
+
+    \begin{itemize}
+        \item $\beta_1$: coefficient of interest
+        \item $\mathbf{X}_i$: control variables
+        \item $\varepsilon_i$: error term
+    \end{itemize}
+
+    % Adapt the specification to your actual research design.
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 6: IDENTIFICATION AND ASSUMPTIONS
+% --------------------------------------------------
+
+\begin{frame}{Identification and Assumptions}
+
+    \begin{itemize}
+        \item \textbf{Identification strategy:}
+        % How will the effect be identified?
+
+        \item \textbf{Key assumptions:}
+        % State the assumptions required for identification
+
+        \item \textbf{Potential threats:}
+        % Omitted variable bias, reverse causality, selection
+    \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 7: EMPIRICAL RESULTS
+% --------------------------------------------------
+
+\begin{frame}{Empirical Results}
+
+    \begin{itemize}
+        \item \textbf{Main findings:}
+        % Report the main estimated coefficients
+
+        \item \textbf{Statistical significance:}
+        % Standard errors, confidence intervals, p-values
+
+        \item \textbf{Robustness and additional results:}
+        % Alternative specifications and subgroup analysis
+    \end{itemize}
+
+    \vspace{0.3cm}
+
+    % Insert regression table or coefficient plot here.
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 8: ECONOMIC INTERPRETATION
+% --------------------------------------------------
+
+\begin{frame}{Economic Interpretation}
+
+    \begin{itemize}
+        \item \textbf{Magnitude of the effect:}
+        % Interpret the estimated coefficient
+
+        \item \textbf{Economic significance:}
+        % Is the effect meaningful in practical terms?
+
+        \item \textbf{Possible mechanisms:}
+        % How might WFH hours affect relationships?
+
+        \item \textbf{Comparison with the literature:}
+        % How do the results compare with previous studies?
+    \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 9: CONCLUSION AND POLICY IMPLICATIONS
+% --------------------------------------------------
+
+\begin{frame}{Conclusion and Policy Implications}
+
+    \begin{itemize}
+        \item \textbf{Main conclusion:}
+        % Answer the research question
+
+        \item \textbf{Policy implications:}
+        % Implications for employers and workplace policy
+
+        \item \textbf{Limitations:}
+        % Key limitations of the study
+
+        \item \textbf{Future research:}
+        % Directions for further investigation
+    \end{itemize}
+
+\end{frame}
+
+% --------------------------------------------------
+% SLIDE 10: REFERENCES
+% --------------------------------------------------
+
+\begin{frame}{References}
+
+    \begin{itemize}
+        \item Author (Year). Title of paper. Journal.
+        \item Author (Year). Title of paper. Journal.
+        \item Additional academic references.
+        \item Data source and documentation.
+    \end{itemize}
+
+    % Replace these placeholders with your actual references.
+
+\end{frame}
+
+% ==================================================
+% END OF PRESENTATION
+% ==================================================
+
+\end{document}
